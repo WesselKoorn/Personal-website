@@ -1,16 +1,19 @@
 <!-- Navigation -->
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <h1 class="navbar-brand mb-0">Wessel Koorn</h1>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" routerLinkActive="active" routerLink="/about">Wessel Koorn</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">About <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Education</a>
-      <a class="nav-item nav-link" href="#">Projects</a>
+      <a class="nav-item nav-link active" routerLinkActive="active" routerLink="/about">About <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/education">Education</a>
+      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/projects">Projects</a>
     </div>
   </div>
 </nav>
 
-<!-- Body -->
-<body>
-  <about></about>
-</body>
+<!-- Content -->
+<div>
+  <router-outlet></router-outlet>
+</div>
