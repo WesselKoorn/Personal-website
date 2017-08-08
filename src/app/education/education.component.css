@@ -1,0 +1,171 @@
+.studies, .skills {
+    margin-top: 5%;
+}
+
+/*===== Tags =====*/
+.tags {
+    list-style: none;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0;
+}
+
+.tags li {
+    float: left;
+}
+
+.tag {
+    background-color: #f7f7f7;
+    border-radius: 3px 0 0 3px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px 0 23px;
+    position: relative;
+    margin: 0 10px 10px 0;
+}
+
+.tag::before {
+    content: '';
+    background: #000;
+    border-radius: 10px;
+    /* box-shadow: inset 0 1px rgba(0, 0, 0, 0.25); */
+    height: 6px;
+    left: 10px;
+    position: absolute;
+    width: 6px;
+    top: 10px;
+}
+
+.tag::after {
+    background: #fff;
+    border-bottom: 13px solid transparent;
+    border-left: 10px solid #f7f7f7;
+    border-top: 13px solid transparent;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+/*===== // Tags =====*/
+
+/*===== Vertical Timeline =====*/
+#conference-timeline {
+  position: relative;
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+}
+#conference-timeline .conference-center-line {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -2px;
+  background: #f7f7f7;
+  z-index: -1;
+}
+#conference-timeline .conference-timeline-content {
+  padding-top: 67px;
+  padding-bottom: 67px;
+}
+.timeline-article {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.timeline-article .content-left-container,
+.timeline-article .content-right-container {
+  max-width: 44%;
+  width: 100%;
+}
+.timeline-article .content-left,
+.timeline-article .content-right {
+  position: relative;
+  width: auto;
+  /* border: 1px solid #ddd; */
+  background-color: #fff;
+  /* box-shadow: 0 1px 3px rgba(0,0,0,.03); */
+  padding: 5px 25px;
+}
+.timeline-article h4 {
+    color: #e2e2e2;
+    font-weight: 300;
+    margin-bottom: 1.2em;
+}
+ .timeline-article p {
+    font-weight: lighter;
+} 
+.timeline-article .content-left-container {
+  float: left;
+}
+.timeline-article .content-right-container {
+  float: right;
+}
+.timeline-article .meta-date {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 62px;
+  height: 62px;
+  margin-left: -31px;
+  color: #000;
+  border-radius: 100%;
+  background: #f7f7f7;
+  text-align: center;
+  line-height: 62px;
+}
+.timeline-article .meta-date .date{
+  display: block;
+  text-align: center;
+  font-weight: 100;
+}
+.timeline-article .meta-date .date {
+  font-size: 1.3em;
+}
+/*===== // Vertical Timeline =====*/
+
+/*===== Resonsive Vertical Timeline =====*/
+@media only screen and (max-width: 830px) {
+  #conference-timeline .timeline-start,
+  #conference-timeline .timeline-end {
+    margin: 0;
+  }
+  #conference-timeline .conference-center-line {
+    margin-left: 0;
+    left: 50px;
+  }
+  .timeline-article .meta-date {
+    margin-left: 0;
+    left: 20px;
+  }
+  .timeline-article .content-left-container,
+  .timeline-article .content-right-container {
+    max-width: 100%;
+    width: auto;
+    float: none;
+    margin-left: 110px;
+    min-height: 53px;
+  }
+  .timeline-article .content-left-container {
+    margin-bottom: 20px;
+  }
+  .timeline-article .content-left,
+  .timeline-article .content-right {
+    padding: 10px 25px;
+    min-height: 65px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .timeline-article p {
+    margin: 0;
+  }
+  .timeline-article p span.article-number {
+    display: none;
+  }
+  
+}
+/*===== // Resonsive Vertical Timeline =====*/

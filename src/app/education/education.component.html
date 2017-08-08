@@ -1,3 +1,62 @@
 <div class="content">
     <h1>{{ title }}</h1>
+
+    <div class="studies">
+        <h2>Studies</h2>
+        <!-- Vertical Timeline -->
+        <section id="conference-timeline">
+            <div class="conference-center-line"></div>
+            <div class="conference-timeline-content">
+                <!-- Article -->
+                <div class="timeline-article" *ngFor="let study of studies;
+                                                    let isOdd=odd;
+                                                    let isEven=even;">
+                    <div [class.content-left-container]="isOdd" [class.content-right-container]="isEven">
+                        <div [class.content-left]="isOdd" [class.content-right]="isEven">
+                            <h3>{{study.title}}</h3>
+                            <h4>{{study.startYear}} - {{study.endYear}}</h4>
+                            <p>
+                                {{study.description}}
+                            </p>
+                            <p>
+                                Average grade: {{study.averageGrade}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="meta-date">
+                        <span class="date">{{study.startYear}}</span>
+                    </div>
+                </div>
+                <!-- // Article -->
+            </div>
+        </section>
+        <!-- // Vertical Timeline -->
+    </div>
+
+    <div class="skills">
+        <h2>Skills</h2>
+        <ul class="tags">
+            <li *ngFor="let competence of competences">
+                <p class="tag">{{competence}}</p>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Languages</h3>
+                <ul>
+                    <li *ngFor="let language of languages">
+                        <p>{{language}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Frameworks &amp; techniques</h3>
+                <ul>
+                    <li *ngFor="let technique of techniques">
+                        <p>{{technique}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
