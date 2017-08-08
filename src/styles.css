@@ -3,5 +3,8 @@
 
 .content {
     margin: 7.5% auto;
-    width: 86%;
+    width: 75%;
+}
+.project .carousel .carousel-inner {
+    overflow: visible;
 }

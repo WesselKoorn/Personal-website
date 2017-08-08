@@ -1,0 +1,29 @@
+.project {
+    margin-top: 5%;
+}
+
+.project .carousel {
+    /* background-color: black; */
+}
+
+.project .carousel img {
+    width: auto;
+    height: auto;
+    max-height: 390px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.image-container {
+    width: auto;
+    height: 400px;
+    max-height: 400px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.image-description {
+    width: 100%;
+    position: absolute;
+    margin-top: 0.5em;
+}
