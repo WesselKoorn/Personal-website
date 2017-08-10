@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 import { Project } from './project';
 import { ProjectService } from './project.service';
@@ -7,18 +8,19 @@ import { ProjectService } from './project.service';
   selector: 'projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
-  providers: [ProjectService]
+  providers: [ProjectService, NgbCarouselConfig]
 })
 export class ProjectsComponent implements OnInit {
   title = 'Projects';
-  description = `
-    Here are some projects that I've done. .......
-  `;
+  description: string;
   projects: Project[];
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService, private carouselConfig: NgbCarouselConfig) { 
+    carouselConfig.interval = 15000;
+  }
 
   async ngOnInit(): Promise<void> {
+    this.description = await this.projectService.getDescription();
     this.projects = await this.projectService.getProjects();
   }
 }

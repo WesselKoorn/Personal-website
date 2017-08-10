@@ -40,3 +40,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+src/app/about/mock-about.ts
+src/app/education/mock-education.ts
+src/app/projects/mock-projects.ts

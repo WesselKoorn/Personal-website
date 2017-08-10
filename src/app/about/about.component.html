@@ -1,10 +1,60 @@
 <div class="content">
-    <h1>Hello!</h1>
-    <img id="personal-photo" src="../../assets/personal-photo-2x.png">
-    <p>
-        Welcome at my site. My name is Wessel Koorn lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis leo dolor, a volutpat massa eleifend non. Integer imperdiet luctus turpis ac hendrerit. Aenean ultricies vitae justo ut volutpat. Integer ut pharetra mauris, sed porttitor augue. Suspendisse ultrices fermentum auctor. Aliquam erat volutpat. Fusce in magna quis justo consequat condimentum vel vitae nulla. Donec eros risus, facilisis quis ex laoreet, sodales ullamcorper ipsum.
-    </p>
-    <p>
-        Quisque gravida tempor lacus, quis scelerisque orci consectetur id. In eu elit fringilla, ultrices metus a, porttitor leo. Mauris turpis felis, pulvinar nec porta in, hendrerit vel arcu. Nullam ac pretium ipsum. Mauris lobortis vel metus non dignissim. Nulla sed vestibulum est. Quisque auctor metus ut leo rhoncus elementum sit amet eget est. Praesent blandit eget nisi nec gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros lorem, pharetra quis velit sed, bibendum tempor eros. Nulla eget dictum libero.
-    </p>
+    <div class="intro">
+        <h1>Hello!</h1>
+        <img id="personal-photo" src="../../assets/personal-photo-2x.png">
+        <p *ngFor="let paragraph of paragraphs">
+            {{paragraph}}
+        </p>
+    </div>
+    <div class="personal-info">
+        <h2>Personal info</h2>
+        <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+                <strong>Address</strong>
+            </div>
+            <div class="col-sm-6">
+                <p>{{personalInfo.address}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+                <strong>Phone number</strong>
+            </div>
+            <div class="col-sm-6">
+                <p>{{personalInfo.phoneNumber}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+                <strong>Email</strong>
+            </div>
+            <div class="col-sm-6">
+                <p>{{personalInfo.email}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+                <strong>Nationality</strong>
+            </div>
+            <div class="col-sm-6">
+                <p>{{personalInfo.nationality}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+                <strong>Date of birth</strong>
+            </div>
+            <div class="col-sm-6">
+                <p>{{personalInfo.dateOfBirth}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+                <strong>Gender</strong>
+            </div>
+            <div class="col-sm-6">
+                <p>{{personalInfo.gender}}</p>
+            </div>
+        </div>
+    </div>
 </div>
