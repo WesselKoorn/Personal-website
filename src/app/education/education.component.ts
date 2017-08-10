@@ -10,7 +10,6 @@ import { EducationService } from './education.service';
   providers: [EducationService]
 })
 export class EducationComponent implements OnInit {
-  title = 'Education';
   studies: Study[];
   competences: string[];
   languages: string[];

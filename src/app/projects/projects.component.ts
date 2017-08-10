@@ -11,7 +11,6 @@ import { ProjectService } from './project.service';
   providers: [ProjectService, NgbCarouselConfig]
 })
 export class ProjectsComponent implements OnInit {
-  title = 'Projects';
   description: string;
   projects: Project[];
 

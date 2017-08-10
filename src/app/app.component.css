@@ -1,0 +1,26 @@
+#banner {
+  height: 46rem;
+  background-image: url('../assets/palm-trees.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#banner h1 {
+    font-size: 3.75rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: white;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 5px; 
+    display: none;
+}
+
+#banner .active-banner-title {
+    display: inherit;
+}
