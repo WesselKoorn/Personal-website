@@ -1,23 +1,24 @@
+<!-- Banner -->
 <div id="banner">
-  <h1 routerLink="/about" routerLinkActive="active-banner-title">About</h1>
-  <h1 routerLink="/education" routerLinkActive="active-banner-title">Education</h1>
-  <h1 routerLink="/projects" routerLinkActive="active-banner-title">Projects</h1>
+  <img src="../assets/wk-logo.png">
+  <h1 routerLink="/about" routerLinkActive="active-banner-title">ABOUT</h1>
+  <h1 routerLink="/education" routerLinkActive="active-banner-title">EDUCATION</h1>
+  <h1 routerLink="/projects" routerLinkActive="active-banner-title">PROJECTS</h1>
 </div>
 
 <!-- Navigation -->
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" routerLinkActive="active" routerLink="/about">Wessel Koorn</a>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLinkActive="active" routerLink="/about">About <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/education">Education</a>
-      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/projects">Projects</a>
-    </div>
-  </div>
+<nav>
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link active" routerLinkActive="active" routerLink="/about">ABOUT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink="/education">EDUCATION</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink="/projects">PROJECTS</a>
+    </li>
+  </ul>
 </nav>
 
 <!-- Content -->
