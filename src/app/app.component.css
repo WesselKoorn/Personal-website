@@ -43,6 +43,44 @@ nav {
     padding: 1em;
 }
 
+footer {
+    text-align: center;
+    background-color: #f7f7f7;
+    height: 100px;
+    margin-top: 5%;
+  }
+  
+  footer p {
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+  footer img {
+      width: 100%;
+      height: 100%;
+      vertical-align: initial;
+  }
+  
+  footer .mailButton {
+    /* Vertical center */
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background-color: #000;
+    color: #FFF;
+    padding: 8px;
+  }
+
+  footer .container {
+    padding-top: 28px;
+    background-color: #f7f7f7;
+  }
+
 @media (max-width: 576px) {
     .nav-link {
         padding: .5em .75em;
