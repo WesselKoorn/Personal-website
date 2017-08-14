@@ -1,10 +1,10 @@
-import { PortfolioPage } from './app.po';
+import { AboutPage } from './app.po';
 
 describe('portfolio App', () => {
-  let page: PortfolioPage;
+  let page: AboutPage;
 
   beforeEach(() => {
-    page = new PortfolioPage();
+    page = new AboutPage();
   });
 
   it('should display welcome message', () => {
