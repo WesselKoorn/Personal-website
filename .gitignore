@@ -44,3 +44,5 @@ src/app/about/mock-about.ts
 src/app/education/mock-education.ts
 src/app/projects/mock-projects.ts
 src/assets/content/
+src/environments/environment.ts
+src/environments/environment.prod.ts

@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Study } from './study';
-import { EducationService } from './education.service';
+import { FirebaseService } from '../firebase.service';
 
 @Component({
   selector: 'education',
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.css'],
-  providers: [EducationService]
+  styleUrls: ['./education.component.css']
 })
 export class EducationComponent implements OnInit {
   studies: Study[];
@@ -15,12 +14,12 @@ export class EducationComponent implements OnInit {
   languages: string[];
   techniques: string[];
 
-  constructor(private educationService: EducationService) { }
+  constructor(private firebaseService: FirebaseService) { }
 
   async ngOnInit(): Promise<void> {
-    this.studies = await this.educationService.getStudies();
-    this.competences = await this.educationService.getCompetences();
-    this.languages = await this.educationService.getLanguages();
-    this.techniques = await this.educationService.getTechniques();
+    this.studies = await this.firebaseService.getStudiesAsync();
+    this.competences = await this.firebaseService.getCompetencesAsync();
+    this.languages = await this.firebaseService.getLanguagesAsync();
+    this.techniques = await this.firebaseService.getTechniquesAsync();
   }
 }
