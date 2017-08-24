@@ -10,12 +10,22 @@ import { FirebaseService } from '../firebase.service';
 })
 export class AboutComponent implements OnInit {
   paragraphs: { string: string };
+  personalPhotoPath: string;
   personalInfo: PersonalInfo = new PersonalInfo();
+
+  personalPhotoUrl = "../assets/spinner.gif";
 
   constructor(private firebaseService: FirebaseService) { }
 
   async ngOnInit(): Promise<void> {
     this.paragraphs = await this.firebaseService.getAboutParagraphsAsync();
+    this.personalPhotoPath = await this.firebaseService.getPersonalPhotoPathAsync();
     this.personalInfo = await this.firebaseService.getPersonalInfoAsync();
+
+    this.getPersonalPhotoUrlAsync();
+  }
+
+  async getPersonalPhotoUrlAsync() {
+    this.personalPhotoUrl = await this.firebaseService.getImageUrlAsync(this.personalPhotoPath);
   }
 }
