@@ -9,7 +9,7 @@ import { FirebaseService } from '../firebase.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  paragraphs: { string: string };
+  paragraphs: string[];
   personalPhotoPath: string;
   personalInfo: PersonalInfo = new PersonalInfo();
 

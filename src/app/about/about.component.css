@@ -5,11 +5,22 @@ h1 {
 
 #personal-photo {
     float: right;
-    width: 12em;
+    width: 15em;
     height: auto;
-    margin: 0 4em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    border-radius: 50%;
 }
 
 .personal-info {
     margin-top: 5%;
 }
+
+/* Small devices (tablets, 768px and less) */
+@media (max-width: 768px) { 
+    #personal-photo {
+        margin: 0;
+        width: 100%;
+        padding: 15%;
+    }
+ }

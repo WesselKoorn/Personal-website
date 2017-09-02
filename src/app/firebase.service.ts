@@ -20,7 +20,7 @@ export class FirebaseService {
 
     // MARK: - About Methods
 
-    async getAboutParagraphsAsync(): Promise<{ string: string }> {
+    async getAboutParagraphsAsync(): Promise<string[]> {
         // Set active listener to cache data
         this.database.ref('/about/paragraphs').on('value', function () {});
         
@@ -110,7 +110,7 @@ export class FirebaseService {
 
         // Get projects from Firebase
         return this.database.ref('/projects/projects').once('value').then((snapshot) => {
-            // return this.mapProjects(snapshot.val());
+            // Get projects dictionary
             var projectsDict = snapshot.val();
 
             for (var projectDict of projectsDict) {

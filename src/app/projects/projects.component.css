@@ -2,14 +2,6 @@
     margin-top: 5%;
 }
 
-.project .carousel .image-container img {
-    width: auto;
-    height: auto;
-    max-height: 390px;
-    max-width: 100%;
-    margin: auto;
-}
-
 .project .carousel .image-container {
     width: auto;
     height: 400px;
@@ -18,9 +10,25 @@
     margin: auto;
 }
 
+.project .carousel .image-container img {
+    width: auto;
+    height: auto;
+    max-height: 390px;
+    max-width: 100%;
+    margin: auto;
+    display: inherit;
+}
+
 .image-description {
     width: 100%;
     position: absolute;
     margin-top: 0.5em;
     font-weight: 300;
 }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .project .carousel {
+        margin: 3em 0;
+    }
+ }
